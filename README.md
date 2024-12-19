@@ -109,52 +109,42 @@ dS_t = S_t(μdt + σdW_t)
 The payoff of European options at maturity T:
 
 For a Call option:
-```
-Payoff = max(S_T - K, 0)
-```
+$Payoff_{call} = \max(S_T - K, 0)$
 
 For a Put option:
-```
-Payoff = max(K - S_T, 0)
-```
+$Payoff_{put} = \max(K - S_T, 0)$
 
-where S_T is the stock price at maturity and K is the strike price.
+where $S_T$ is the stock price at maturity and $K$ is the strike price.
 
 Black-Scholes formula for a call option:
-```
-C = S_0N(d1) - Ke^{-rT}N(d2)
+$C = S_0N(d_1) - Ke^{-rT}N(d_2)$
 
 where:
-d1 = [ln(S_0/K) + (r + σ²/2)T] / (σ√T)
-d2 = d1 - σ√T
-```
+$d_1 = \frac{\ln(S_0/K) + (r + \sigma^2/2)T}{\sigma\sqrt{T}}$
+$d_2 = d_1 - \sigma\sqrt{T}$
 
 #### Asian Options
 The payoff of an Asian option depends on the average price of the underlying asset:
-```
-Payoff = max(S_avg - K, 0)
+
+$Payoff_{asian} = \max(S_{avg} - K, 0)$
 
 where:
-S_avg = 1/N ∑ S_i for i from 1 to N
-```
+$S_{avg} = \frac{1}{N} \sum_{i=1}^N S_i$
 
 The Monte Carlo price is estimated as:
-```
-C_T = e^{-rT}/M ∑(1/N ∑S^{(i)}_{t_k} - K)_+
-for i from 1 to M simulations
-```
+
+$C_T = \frac{e^{-rT}}{M} \sum_{i=1}^M \max(\frac{1}{N}\sum_{k=1}^N S^{(i)}_{t_k} - K, 0)$
 
 #### Tunnel Options
 The payoff structure for tunnel options combines barrier monitoring with final payoff:
-```
-P = ∑_{i=1}^{T-1} {
-    S_i/S_0 × 0.01  if K[0] < S_i < K[1]
-    S_i/S_0 × 0.02  if S_i ≥ K[1]
-    0               otherwise
-} + max(S_T/S_0 - K[1], 0)
-```
 
-where K[0] and K[1] are the lower and upper barriers respectively.
+$P = \sum_{i=1}^{T-1} \begin{cases} 
+\frac{S_i}{S_0} \times 0.01 & \text{if } K[0] < S_i < K[1] \\
+\frac{S_i}{S_0} \times 0.02 & \text{if } S_i \geq K[1] \\
+0 & \text{otherwise}
+\end{cases} + \max(\frac{S_T}{S_0} - K[1], 0)$
+
+where $K[0]$ and $K[1]$ are the lower and upper barriers respectively.
 
 ### Monte Carlo Simulation
 Used for all option types, with specific implementations for each:
