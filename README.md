@@ -84,7 +84,7 @@ streamlit run Projet_Pricing.py
 
 To add screenshots of your application, save them in an `images` folder and include them in your README like this:
 
-![European Option Interface](<img width="1496" alt="Screenshot 2024-12-19 at 22 54 37" src="https://github.com/user-attachments/assets/892d181c-06ba-475d-814c-45b5cb64d944" />)
+![European Option Interface](http://localhost:8501/#:~:text=et%20de%20prix-,d%27exercice,-(strike))
 *European Option Pricing Interface*
 
 ![Asian Option Interface](images/asian_option.png)
