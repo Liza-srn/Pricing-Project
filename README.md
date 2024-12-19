@@ -152,17 +152,6 @@ Used for all option types, with specific implementations for each:
 - Asian: Average price calculation
 - Tunnel: Barrier monitoring and custom payoff structure
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 📧 Contact
 
-For any questions or feedback, please reach out to [your-email@example.com]
-
----
-⭐️ If you find this project useful, please consider giving it a star!
+For any questions or feedback, please reach out to liza.sehrine12@gmail.com .
