@@ -148,6 +148,7 @@ P = \sum_{i=1}^{T-1}
 + \max\left(\frac{S_T}{S_0} - K_2, 0\right)
 $$
 
+
 where $K_1$ and $K_2$ are respectively the lower and upper barriers. The payoff combines periodic monitoring of barrier levels with a final call-like payoff.
 
 ### Monte Carlo Simulation
