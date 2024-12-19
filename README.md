@@ -84,7 +84,7 @@ streamlit run Projet_Pricing.py
 
 To add screenshots of your application, save them in an `images` folder and include them in your README like this:
 
-![Option Pricing Calculator Interface](images/Screenshot_2024-12-19_at_23.00.04.png)
+![Option Pricing Calculator Interface](Screenshot_2024-12-19_at_23.00.04.png)
 *Interactive interface for option pricing*
 
 
