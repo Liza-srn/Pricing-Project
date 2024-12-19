@@ -99,9 +99,9 @@ The project implements various mathematical models:
 
 ### Black-Scholes Model
 For European options, the Black-Scholes formula is used:
-```
-dS_t = S_t(μdt + σdW_t)
-```
+
+$dS_t = S_t(μdt + σdW_t)$
+
 
 ### Option Payoffs and Pricing Formulas
 
