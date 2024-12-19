@@ -137,13 +137,15 @@ $C_T = \frac{e^{-rT}}{M} \sum_{i=1}^M \max(\frac{1}{N}\sum_{k=1}^N S^{(i)}_{t_k}
 
 #### Tunnel Options
 The payoff structure for tunnel options combines barrier monitoring with final payoff:
+
 $
-P = \sum_{i=1}^{T-1} \begin{cases}
-\frac{S_i}{S_0} \times 0.01 & \text{if } K_1 < S_i < K_2 \[2ex]
-\frac{S_i}{S_0} \times 0.02 & \text{if } S_i \geq K_2 \[2ex]
+P = \sum_{i=1}^{T-1} \begin{cases} 
+\frac{S_i}{S_0} \times 0.01 & \text{if } K_1 < S_i < K_2 \\[2ex]
+\frac{S_i}{S_0} \times 0.02 & \text{if } S_i \geq K_2 \\[2ex]
 0 & \text{otherwise}
 \end{cases} + \max\left(\frac{S_T}{S_0} - K_2, 0\right)
 $
+
 where $K_1$ and $K_2$ are respectively the lower and upper barriers. The payoff combines periodic monitoring of barrier levels with a final call-like payoff.
 
 ### Monte Carlo Simulation
@@ -151,7 +153,3 @@ Used for all option types, with specific implementations for each:
 - European: Standard GBM simulation
 - Asian: Average price calculation
 - Tunnel: Barrier monitoring and custom payoff structure
-
-## 📧 Contact
-
-For any questions or feedback, please reach out to liza.sehrine12@gmail.com .
